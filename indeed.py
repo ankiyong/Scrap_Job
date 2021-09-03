@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import time
+
 
 
 
@@ -35,7 +35,3 @@ def get_job(name,max_page):
             job = extract_info(info)
             jobs.append(job)
     return jobs
-url = 'https://kr.indeed.com/%EC%B7%A8%EC%97%85?as_and=python&limit=50'
-page = last_page(url)
-for i in get_job('python',page):
-    print(i['title'])
