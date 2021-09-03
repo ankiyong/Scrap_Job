@@ -37,4 +37,5 @@ def get_job(name,max_page):
     return jobs
 url = 'https://kr.indeed.com/%EC%B7%A8%EC%97%85?as_and=python&limit=50'
 page = last_page(url)
-print(get_job('python',page))
+for i in get_job('python',page):
+    print(i['title'])

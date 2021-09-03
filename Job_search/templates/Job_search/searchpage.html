@@ -12,12 +12,20 @@
     </style>
 </head>
 <body>
-<h1>Search Results</h1>
+<h1>Search Results {{word}}</h1>
 <section>
+
     <h4>title</h4>
     <h4>company</h4>
     <h4>location</h4>
     <h4>link</h4>
+    {%for jobs in job%}
+    <span>{{jobs.title}}</span>
+    <span>{{jobs.company}}</span>
+    <span>{{jobs.location}}</span>
+    <span>{{jobs.link}}</span>
+
+    {%endfor%}
 </section>
 </body>
 </html>
