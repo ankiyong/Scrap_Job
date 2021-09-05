@@ -35,3 +35,11 @@ def get_job(name,max_page):
             job = extract_info(info)
             jobs.append(job)
     return jobs
+
+
+def get_jobs(word):
+    url = f'https://kr.indeed.com/%EC%B7%A8%EC%97%85?as_and={word}&limit=50'
+    page = last_page(url)
+    jobs = get_job(word,page)
+    return jobs
+
