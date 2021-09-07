@@ -37,7 +37,7 @@ def return_job(name,max_page):
 
 
 
-def get_jobs(word):
+def get_kor_jobs(word):
     url = f'https://www.jobkorea.co.kr/Search/?stext={word}'
     page = last_page(url)
     jobs = return_job(word,page)
