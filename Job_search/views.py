@@ -10,7 +10,7 @@ def index(request):
 def search_page(request):
     word = request.GET.get('job_name','')
     site = request.GET.get('chk','')
-    if site == 'indeed1':
+    if site == 'indeed':
         jobs = get_jobs(word)
     else:
         jobs = get_kor_jobs(word)
